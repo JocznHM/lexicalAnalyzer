@@ -1,5 +1,5 @@
 # lexicalAnalyzer
-<h2>It is an example of a simple lexical analyzer for teaching purposes for the subject "lenguajes y autómatas 1" of the "Insituto Tecnológico de San Luis Potosí".</h2>
+<p>It is an example of a simple lexical analyzer for teaching purposes for the subject "lenguajes y autómatas 1" of the "Insituto Tecnológico de San Luis Potosí".</p>
 
 <b>How to use:</b>
 <br>
