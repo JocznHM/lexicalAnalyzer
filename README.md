@@ -3,6 +3,8 @@
 
 <b>How to use:</b>
 <br>
+-Download the source code, it can be in a zip file to unzip. If you prefer you can use git in CLI mode with the command"git clone https://github.com/JocznHM/lexicalAnalyzer.git"
+<br>
 -Install requirements.txt with command on CLI mode "pip install -r requirements.txt"
 <br>
 -Open folder on CLI mode and run "python3 lexicGUI.py" or "python3 lexicCLI.py"
