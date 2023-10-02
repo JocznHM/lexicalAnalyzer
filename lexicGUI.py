@@ -27,7 +27,8 @@ import customtkinter as tk
 
 """
 def analizador_lexico(alfabeto, programa_fuente):
-
+    #delete the text in the result text area
+    resultado_text.delete("1.0", tk.END)
     tokens = []
     i = 0
 
@@ -39,6 +40,8 @@ def analizador_lexico(alfabeto, programa_fuente):
             then add the character to the token variable and increase the position
         """
         while i < len(programa_fuente) and programa_fuente[i] in alfabeto:
+            resultado_text.insert(tk.END, "el caracter es valido... Caracter: (" +
+                                  programa_fuente[i] + ") \n")
             token += programa_fuente[i]
             i += 1
         """
@@ -51,8 +54,7 @@ def analizador_lexico(alfabeto, programa_fuente):
         elif programa_fuente[i].isspace():
             i += 1
         else:
-            resultado_text.delete("1.0", tk.END)
-            resultado_text.insert(tk.END, "Error: Símbolo no válido en la posición " + str(i))
+            resultado_text.insert(tk.END, "Error: caracter no válido: el caracter es( " + programa_fuente[i] + ") \n")
             return None
     #return tokens list
     return tokens
@@ -71,7 +73,6 @@ def analizar():
 
     #if tokens is not None then show the tokens founds
     if tokens is not None:
-        resultado_text.delete("1.0", tk.END)
         resultado_text.insert(tk.END, "Tokens encontrados:\n")
         for token in tokens:
             resultado_text.insert(tk.END, token + "\n")
